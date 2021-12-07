@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 var body = document.body,
       sbrBtn = document.querySelector('.hamburger-menu-container'),
       sbr = document.querySelector('.sidebar-container');
@@ -24,3 +25,5 @@ var sbrNav = document.querySelector('.navigation>.touch-icon'),
     sbrOver = document.querySelector('.sidebar-container+.bg-overlay');
 sbrNav.addEventListener('click', sbrClose, false );
 sbrOver.addEventListener('click', sbrClose, false );
+}
+}, false); //DOMContentLoaded end
