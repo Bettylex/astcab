@@ -20,8 +20,8 @@ function sbrClose() {
 if(!sbrIsOpn){ 
 sbrBtn.addEventListener('click', sbrOpen, false );
 } else { 
-var sbrOver = document.querySelector(".bg-overlay"),
-sbrNav = document.querySelector(".touch-icon");
+var sbrOver = document.querySelector(".sidebar-wrap .bg-overlay"),
+sbrNav = document.querySelector(".navigation touch-icon");
 sbrOver.addEventListener('click', sbrClose, false );
 sbrNav.addEventListener('click', sbrClose, false );
 }
