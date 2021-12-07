@@ -1,4 +1,4 @@
-const body = document.body,
+var body = document.body,
       sbrBtn = document.querySelector(".hamburger-menu-container"),
       sbr = document.querySelector(".sidebar-container");
 
