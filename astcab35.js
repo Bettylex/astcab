@@ -5,18 +5,16 @@ var body = document.body,
 
 // Sidebar Toggle
 function sbrOpen(){  
-    sbr.classList.remove('sidebar-invisible');
-    sbr.classList.add('sidebar-visible');
+    sbr.classList.replace('sidebar-invisible','sidebar-visible');
     body.classList.add('sidebar-visible');          
 }
 sbrBtn.addEventListener('click', sbrOpen, false );
 
 var sbrOver = document.querySelector(".bg-overlay"),
-sbrNav = document.querySelector(".touch-icon");
+sbrNav = document.querySelector(".navigation>.touch-icon");
 function sbrClose() {
-      sbr.classList.remove('sidebar-visible');
-      body.classList.remove('sidebar-visible');
-      sbr.classList.add('sidebar-invisible');
+      sbr.classList.replace('sidebar-invisible','sidebar-visible');
+      body.classList.remove('sidebar-visible');     
   }
 sbrOver.addEventListener('click', sbrClose, false );
 sbrNav.addEventListener('click', sbrClose, false );
