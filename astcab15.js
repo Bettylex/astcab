@@ -1,8 +1,7 @@
 var body = document.body,
       sbrBtn = document.querySelector(".hamburger-menu-container"),
       sbr = document.querySelector(".sidebar-container"),
-      sbrOver = document.querySelector(".sidebar-visible + .bg-overlay"),
-      sbrNav = document.querySelector(".sidebar-visible .touch-icon");
+      sbrIsOpn = sbr.matches(".sidebar-visible");
 
 // Sidebar Toggle
 function sbrOpen(){  
@@ -12,6 +11,9 @@ function sbrOpen(){
 }
 sbrBtn.addEventListener('click', sbrOpen, false );
 
+if(sbrIsOpn){ 
+var sbrOver = document.querySelector(".sidebar-visible + .bg-overlay"),
+sbrNav = document.querySelector(".sidebar-visible .touch-icon");
 function sbrClose() {
       sbr.classList.remove('sidebar-visible');
       body.classList.remove('sidebar-visible');
@@ -19,3 +21,4 @@ function sbrClose() {
   }
 sbrOver.addEventListener('click', sbrClose, false );
 sbrNav.addEventListener('click', sbrClose, false );
+}
