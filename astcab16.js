@@ -12,8 +12,8 @@ function sbrOpen(){
 sbrBtn.addEventListener('click', sbrOpen, false );
 
 if(sbrIsOpn){ 
-var sbrOver = document.querySelector(".sidebar-visible + .bg-overlay"),
-sbrNav = document.querySelector(".sidebar-visible .touch-icon");
+var sbrOver = document.querySelector(".bg-overlay"),
+sbrNav = document.querySelector(".touch-icon");
 function sbrClose() {
       sbr.classList.remove('sidebar-visible');
       body.classList.remove('sidebar-visible');
