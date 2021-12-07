@@ -16,6 +16,6 @@ document.addEventListener('click', function (e) {
       sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
       body.classList.remove('sidebar-visible');
       }  
-}, false);      
+}, false);    
     
-}, false); //DOMContentLoaded end
+}); //DOMContentLoaded end
