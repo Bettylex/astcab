@@ -21,4 +21,4 @@ function sbrClose(e) {
     }
   }
  }
- body.addEventListener('click', sbrClose, false);
+ body.addEventListener('click', sbrClose);
