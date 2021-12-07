@@ -9,11 +9,8 @@ function sbrOpen(){
 }
 sbrBtn.addEventListener('click', sbrOpen, false );
 
-var sbrOver = document.querySelector(".bg-overlay"),
-sbrNav = document.querySelector(".navigation>.touch-icon");
-function sbrClose() {
+function sbrClose(e) {
+      if (e.target.matches('.navigation>.touch-icon') || e.target.matches('.bg-overlay') )
       sbr.classList.replace('sidebar-invisible','sidebar-visible');
       body.classList.remove('sidebar-visible');     
   }
-sbrOver.addEventListener('click', sbrClose, false );
-sbrNav.addEventListener('click', sbrClose, false );
