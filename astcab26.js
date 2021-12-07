@@ -5,19 +5,19 @@ var body = document.body,
 
 // Sidebar Toggle
 function sbrOpen(){
-    if(sbr.classList.contains('sidebar-invisible')){
+    if(sbr.matches('.sidebar-invisible')){
     sbr.classList.replace('sidebar-invisible', 'sidebar-visible');
     }
-if(!body.classList.contains('sidebar-visible')){
+if(!body.matches('.sidebar-visible')){
     body.classList.add('sidebar-visible');
 }
 sbrBtn.addEventListener('click', sbrOpen, false );
 
 function sbrClose() {
-      if(sbr.classList.contains('sidebar-visible')){
+      if(sbr.matches('.sidebar-visible')){
       sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
       }  
-      if(body.classList.contains('sidebar-visible')){
+      if(body.matches('.sidebar-visible')){
       body.classList.remove('sidebar-visible');
       }      
   }
