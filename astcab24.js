@@ -16,7 +16,7 @@ function sbrClose() {
       if(sbr.classList.contains('sidebar-visible')){
       sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
       }  
-      if(!body.classList.contains('sidebar-visible')){
+      if(body.classList.contains('sidebar-visible')){
       body.classList.remove('sidebar-visible');
       }      
   }
