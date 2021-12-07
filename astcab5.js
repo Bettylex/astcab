@@ -3,21 +3,23 @@ var body = document.body,
       sbr = document.querySelector(".sidebar-container");
 
 // Sidebar Toggle
-if (sbr.classList.contains('sidebar-invisible')) {
+if (sbr.classList.contains('sidebar-invisible') && body.classList.contains('sidebar-invisible') ) {
 function sbrOpen(){  
     sbr.classList.remove('sidebar-invisible');
+    body.classList.remove('sidebar-invisible'); 
     sbr.classList.add('sidebar-visible');
-    body.classList.toggle('sidebar-visible');          
+    body.classList.add('sidebar-visible');          
 }
 }
 sbrBtn.addEventListener('click', sbrOpen, false );
 
-if (sbr.classList.contains('sidebar-visible')) {
+if (sbr.classList.contains('sidebar-visible') && body.classList.contains('sidebar-visible')) {
 function sbrClose(e) {
     if (e.target.matches('.bg-overlay') || e.target.matches('.touch-icon') ) {
-      sbr.classList.remove('sidebar-visible')
+      sbr.classList.remove('sidebar-visible');
+      body.classList.add('sidebar-visible');
       sbr.classList.add('sidebar-invisible');
-      body.classList.toggle('sidebar-invisible');
+      body.classList.add('sidebar-invisible');
     }
   }
  }
