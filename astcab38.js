@@ -11,6 +11,6 @@ sbrBtn.addEventListener('click', sbrOpen, false );
 
 function sbrClose(e) {
       if (e.target.matches('.navigation>.touch-icon') || e.target.matches('.bg-overlay') )
-      sbr.classList.replace('sidebar-invisible','sidebar-visible');
+      sbr.classList.replace('sidebar-visible','sidebar-invisible');
       body.classList.remove('sidebar-visible');     
   }
