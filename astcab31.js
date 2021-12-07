@@ -4,7 +4,7 @@ var body = document.body,
       sbr = document.querySelector('.sidebar-container');
 
 // Sidebar Toggle
-function sbrOpen(e){
+function sbrOpen(){
     sbr.classList.replace('sidebar-invisible', 'sidebar-visible');
     body.classList.add('sidebar-visible');
 }
