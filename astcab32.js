@@ -4,11 +4,9 @@ var body = document.body,
       sbr = document.querySelector('.sidebar-container');
 
 // Sidebar Toggle
-function sbrOpen(){
+function sbrTgl(){
     sbr.classList.replace('sidebar-invisible', 'sidebar-visible');
     body.classList.add('sidebar-visible');
-}
-sbrBtn.addEventListener('click', sbrOpen, false );
       
 document.addEventListener('click', function (e) {
     if(e.target.matches('.touch-icon') || e.target.matches('.bg-overlay') ){
@@ -16,5 +14,7 @@ document.addEventListener('click', function (e) {
     body.classList.remove('sidebar-visible');
       }  
 }, false);    
+}
+sbrBtn.addEventListener('click', sbrTgl, false );
     
 }, false);  //DOMContentLoaded end
