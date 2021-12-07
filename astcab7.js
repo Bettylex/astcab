@@ -3,10 +3,9 @@ var body = document.body,
       sbr = document.querySelector(".sidebar-container");
 
 // Sidebar Toggle
-if (sbr.classList.contains('sidebar-invisible') && body.classList.contains('sidebar-invisible') ) {
+if (sbr.classList.contains('sidebar-invisible') ) {
 function sbrOpen(){  
     sbr.classList.remove('sidebar-invisible');
-    body.classList.remove('sidebar-invisible'); 
     sbr.classList.add('sidebar-visible');
     body.classList.add('sidebar-visible');          
 }
@@ -17,9 +16,8 @@ if (sbr.classList.contains('sidebar-visible') && body.classList.contains('sideba
 function sbrClose(e) {
     if (e.target.matches('.bg-overlay') || e.target.matches('.touch-icon') ) {
       sbr.classList.remove('sidebar-visible');
-      body.classList.add('sidebar-visible');
+      body.classList.remove('sidebar-visible');
       sbr.classList.add('sidebar-invisible');
-      body.classList.add('sidebar-invisible');
     }
   }
  }
