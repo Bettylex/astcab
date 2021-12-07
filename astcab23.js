@@ -14,5 +14,7 @@ function sbrClose() {
       sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
       body.classList.remove('sidebar-visible');   
   }
-var sbrNav = document.querySelector('.navigation>.touch-icon');
+var sbrNav = document.querySelector('.navigation>.touch-icon'),
+    sbrOver = document.querySelector('.sidebar-container+.bg-overlay');
 sbrNav.addEventListener('click', sbrClose, false );
+sbrOver.addEventListener('click', sbrClose, false );
