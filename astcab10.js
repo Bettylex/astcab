@@ -1,6 +1,8 @@
 var body = document.body,
       sbrBtn = document.querySelector(".hamburger-menu-container"),
-      sbr = document.querySelector(".sidebar-container");
+      sbr = document.querySelector(".sidebar-container"),
+      sbrOver = document.querySelector(".bg-overlay"),
+      sbrNav = document.querySelector(".navigation .touch-icon");
 
 // Sidebar Toggle
 if(sbr.classList.contains('sidebar-invisible') ) {
@@ -21,4 +23,5 @@ function sbrClose(e) {
     }
   }
  }
- body.addEventListener('click', sbrClose);
+sbrOver.addEventListener('click', sbrClose, false );
+sbrNav.addEventListener('click', sbrClose, false );
