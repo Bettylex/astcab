@@ -1878,28 +1878,6 @@
   var Mf = function (a) {
     this.K = a
   };
-  Mf.prototype.show = function () {
-    this.K && M.remove(this.K, "hidden")
-  };
-  Mf.prototype.Qb = function () {
-    this.K && M.add(this.K, "hidden")
-  };
-  Mf.prototype.aa = function () {
-    this.K && this.K.parentNode && (this.K.parentNode.removeChild(this.K), this.K = null)
-  };
-  var Nf = function (a, b, c) {
-    var d = Sc(document, "div");
-    M.add(d, "dim-overlay");
-    M.add(d, "hidden");
-    c && (d.id = c);
-    a.appendChild(d);
-    var e = new Mf(d);
-    O(d, "click", function (f) {
-      b && b(f);
-      e.Qb()
-    });
-    return e
-  };
   var Qf = function (a, b, c, d, e, f) {
       if (Ab && e) return Of(a);
       if (e && !d) return !1;
