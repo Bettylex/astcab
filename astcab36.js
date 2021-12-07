@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
 var body = document.body,
       sbrBtn = document.querySelector(".hamburger-menu-container"),
       sbr = document.querySelector(".sidebar-container");
@@ -18,5 +17,3 @@ function sbrClose() {
   }
 sbrOver.addEventListener('click', sbrClose, false );
 sbrNav.addEventListener('click', sbrClose, false );
-    
-}, false);  //DOMContentLoaded end
