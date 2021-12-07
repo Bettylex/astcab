@@ -1,6 +1,6 @@
 var body = document.body,
       sbrBtn = document.querySelector('.hamburger-menu-container'),
-      sbr = document.querySelector('.sidebar-container'),
+      sbr = document.querySelector('.sidebar-container');
 
 // Sidebar Toggle
 function sbrOpen(){  
