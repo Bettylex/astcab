@@ -3,14 +3,17 @@ var body = document.body,
       sbr = document.querySelector(".sidebar-container");
 
 // Sidebar Toggle
-function sbrOpen(){  
+function sbrTgl(){  
     sbr.classList.replace('sidebar-invisible','sidebar-visible');
-    body.classList.add('sidebar-visible');          
-}
-sbrBtn.addEventListener('click', sbrOpen, false );
-
+    body.classList.add('sidebar-visible');
+      
 window.onclick = function(e){
       if (e.target.matches('.touch-icon') || e.target.matches('.bg-overlay') ) {
       sbr.classList.replace('sidebar-visible','sidebar-invisible');
       body.classList.remove('sidebar-visible');     
   }
+ }     
+}
+sbrBtn.addEventListener('click', sbrTgl, false );
+
+
