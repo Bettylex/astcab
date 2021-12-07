@@ -5,7 +5,7 @@ var body = document.body,
 
 // Sidebar Toggle
 function sbrOpen(e){
-    if(e.target.closest('.sidebar-container').matches('.sidebar-invisible')){
+    if(sbr.matches('.sidebar-invisible')){
     sbr.classList.replace('sidebar-invisible', 'sidebar-visible');
     body.classList.add('sidebar-visible');
     }
