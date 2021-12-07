@@ -8,14 +8,15 @@ function sbrOpen(e){
     if(e.target.closest('.sidebar-container').matches('.sidebar-invisible')){
     sbr.classList.replace('sidebar-invisible', 'sidebar-visible');
     body.classList.add('sidebar-visible');
-    }   
+    }
+}
 sbrBtn.addEventListener('click', sbrOpen, false );
       
 document.addEventListener('click', function (e) {
-	if(e.target.closest('.sidebar-container').matches('.sidebar-visible')){
-      sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
-      body.classList.remove('sidebar-visible');
+    if(e.target.closest('.sidebar-container').matches('.sidebar-visible')){
+    sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
+    body.classList.remove('sidebar-visible');
       }  
 }, false);    
     
-}); //DOMContentLoaded end
+}, false);  //DOMContentLoaded end
