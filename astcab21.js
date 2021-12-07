@@ -5,14 +5,13 @@ var body = document.body,
 
 // Sidebar Toggle
 function sbrOpen(){  
-    sbr.classList.replace("sidebar-invisible", "sidebar-visible");
+    sbr.classList.replace('sidebar-invisible', 'sidebar-visible');
     body.classList.add('sidebar-visible');
-      
 }
 sbrBtn.addEventListener('click', sbrOpen, false );
 
 function sbrClose() {
-      sbr.classList.replace("sidebar-visible", "sidebar-invisible");
+      sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
       body.classList.remove('sidebar-visible');   
   }
 if(!sbrIsOpn){ 
