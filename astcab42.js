@@ -1,11 +1,11 @@
 var body = document.body,
       sbrBtn = document.querySelector(".hamburger-menu-container"),
-      sbr = document.querySelector(".sidebar-container"),
+      sbr = document.getElementById("#sidebar"),
     sbrIsOpn = sbr.matches('.sidebar-visible');
 
 // Sidebar Toggle
 function sbrTgl(){
-  if (sbrIsOpn){   
+  if (!sbrIsOpn){   
     sbr.classList.replace('sidebar-invisible','sidebar-visible');
     body.classList.add('sidebar-visible');
 } else {      
