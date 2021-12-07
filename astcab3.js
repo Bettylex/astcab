@@ -13,7 +13,7 @@ function sbrOpen(){
 sbrBtn.addEventListener('click', sbrOpen, false );
 
 if (sbr.classList.contains('sidebar-visible')) {
-function sbrCls(e) {
+function sbrClose(e) {
     if (e.target.matches('.bg-overlay') || e.target.matches('.touch-icon') ) {
       sbr.classList.remove('sidebar-visible')
       sbr.classList.add('sidebar-invisible');
