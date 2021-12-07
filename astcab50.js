@@ -9,7 +9,7 @@ function sbrTgl() {
     sbr.classList.replace('sidebar-invisible', 'sidebar-visible');
     body.classList.add('sidebar-visible');
   }
-
+}
   if (sbrIsOpn) {
   window.addEventListener("click", function(e) {
         if (e.target.matches('sidebar-visible>.touch-icon') || e.target.matches('sidebar-visible+.bg-overlay')) {
@@ -18,7 +18,6 @@ function sbrTgl() {
         }
      });
   }
-}
 
 sbrBtn.addEventListener('click', sbrTgl, false);
 
