@@ -2689,104 +2689,6 @@
       } else if (xf) return (a = Af(/Android\s+([0-9.]+)/)) ? a : Af(/Version\/([0-9.]+)/);
       return ""
     }();
-  var Cf = Tb(function () {
-      return !x || 0 <= mb(Bf, 9)
-    }),
-    Df = Tb(function () {
-      return C || yb || z && 0 <= mb(Bf, 10) || x && 0 <= mb(Bf, 10)
-    }),
-    Ff = function (a, b) {
-      Cf() && (b = Df() ? "translate3d(0px," + b + "px,0px)" : "translate(0px," + b + "px)", kd(a, Ef(), b))
-    },
-    Ef = Tb(function () {
-      return x && 9 == Rb ? "-ms-transform" : "transform"
-    });
-  var Hf = function (a) {
-    this.g = U("blogger.templates.responsive.CollapsedHeader");
-    W(this.g, "Initializing collapsed header.");
-    try {
-      if (this.qc = a || new Ga, this.dc = null, this.A = document.querySelector(".centered-top-container"))
-        if (this.fa = document.querySelector(".centered-top-placeholder"))
-          if (this.uf = document.querySelector(this.qc.Tg)) {
-            var b = this.A.querySelector(".centered-top");
-            if (b) {
-              this.Sf = b.cloneNode(!0);
-              this.Xd = this.Rb = !1;
-              this.Gd = Oc(document).y;
-              var c = Ub(this.qg, this.qc.Eg, this);
-              this.dc = c;
-              c();
-              O(this.qc.Pg,
-                "scroll", this.dc);
-              Gf(this);
-              W(this.g, "Finished initializing collapsed header.")
-            } else V(this.g, "There was an error initializing the collapsed header. centered-top not found.")
-          } else V(this.g, "There was an error initializing the collapsed header. centered-bottom not found.");
-      else V(this.g, "There was an error initializing the collapsed header. centered-top-placeholder not found.");
-      else V(this.g, "There was an error initializing the collapsed header. centered-top-container not found.")
-    } catch (d) {
-      V(this.g,
-        "There was an error initializing the collapsed header. Uncaught exception.", d), this.h()
-    }
-  };
-  Hf.prototype.qg = function () {
-    var a = this,
-      b = this.Gd;
-    this.Gd = Oc(document).y;
-    b = this.Gd < b;
-    0 > this.uf.getBoundingClientRect().top && b ? this.Xd || (this.Rb && (L in this.A && R(this.A, L), this.Rb = !1), this.Xd = !0, M.add(document.body, "collapsed-header"), M.contains(this.fa, "cloned") || (M.add(this.fa, "cloned"), this.fa.appendChild(this.Sf)), M.add(this.A, "sticky"), M.remove(this.A, "animating"), If(this), setTimeout(function () {
-        M.add(a.A, "animating");
-        Ff(a.A, 0);
-        a.A.style.opacity = "1";
-        je("collapsed-header-show", new Jf("collapsed-header-show"))
-      },
-      0), document.body.appendChild(this.A)) : (this.Xd = !1, M.contains(this.fa, "cloned") && (If(this), L ? O(this.A, L, this.Qe, !1, this) : setTimeout(function () {
-      return a.Qe()
-    }, this.qc.hg), this.Rb = !0))
-  };
-  var If = function (a) {
-    var b = a.A.getBoundingClientRect().height;
-    Ff(a.A, -b);
-    a.A.style.opacity = "0"
-  };
-  Hf.prototype.Qe = function () {
-    this.Rb && (this.A.style.transform = "", this.A.style.opacity = "", L && R(this.A, L), this.Rb = !1, this.fa.parentNode.insertBefore(this.A, this.fa), M.remove(document.body, "collapsed-header"), M.contains(this.fa, "cloned") && (M.remove(this.fa, "cloned"), this.fa.removeChild(this.fa.lastChild)), M.remove(this.A, "sticky"), je("collapsed-header-hide", new Jf("collapsed-header-hide")))
-  };
-  Hf.prototype.isVisible = function () {
-    return M.contains(document.body, "collapsed-header")
-  };
-  Hf.prototype.Ee = function () {
-    return this.isVisible() && this.A.offsetHeight || 0
-  };
-  var Gf = function (a) {
-      Kf(a, !0);
-      O(window, "hashchange", function () {
-        return Kf(a)
-      })
-    },
-    Kf = function (a, b) {
-      var c = window.location.hash;
-      b = void 0 === b ? !1 : b;
-      var d = void 0 === d ? !1 : d;
-      if (!/^#[^ ]+$/.test(c)) return !1;
-      var e = document.getElementById(c.slice(1));
-      if (e) {
-        var f = ae(window, "collapsed-header-show", Lf(a, e));
-        setTimeout(function () {
-          Q(f)
-        }, b ? 3E3 : 100);
-        Ze && d && window.history.pushState({}, document.title, window.location.pathname + c)
-      }
-      return !!e
-    },
-    Lf = function (a, b) {
-      return function () {
-        if (!a.isVisible()) return !1;
-        var c = a.Ee() + 20,
-          d = b.getBoundingClientRect().top;
-        return 0 <= d && d < c && window.pageYOffset > c ? (window.scrollTo(window.pageXOffset, window.pageYOffset - c), !0) : !1
-      }
-    };
   Hf.prototype.h = function () {
     this.dc && (P(window, "scroll", this.dc), this.dc = null)
   };
@@ -6235,3 +6137,98 @@
         this.Zd = b;
         var c = this.Zd.parentElement;
         this.s = c && Nf(c, function () {
+          return a.fe()
+        });
+        (this.Xc = document.querySelector(".sidebar-back")) && O(this.Xc, "click", this.fe, !1, this);
+        (this.Ac = document.querySelector(".centered-top-container .hamburger-menu")) && O(this.Ac, "click", this.fe, !1, this);
+        W(this.g, "Finished initializing sidebar toggle.")
+      } else V(this.g,
+        "There was an error initializing the sidebar toggle section. sidebar not found.")
+    } catch (d) {
+      V(this.g, "Error initializing sidebar toggle. Uncaught exception.", d), this.h()
+    }
+  };
+  sj.prototype.fe = function () {
+    ti(this.Zd)();
+    M.contains(this.Zd, "sidebar-invisible") ? (this.s && this.s.Qb(), M.remove(document.body, "sidebar-visible")) : (this.s && this.s.show(), M.add(document.body, "sidebar-visible"))
+  };
+  sj.prototype.h = function () {
+    this.Ac && R(this.Ac, "click");
+    this.Xc && R(this.Xc, "click");
+    this.s && (this.s.aa(), this.s = null)
+  };
+  var tj = function () {
+    this.Kb = "r-snippet-container";
+    this.mb = "r-snippetized";
+    this.bg = "r-snippet-fade"
+  };
+  var uj = function () {
+    var a = this;
+    this.g = U("blogger.templates.responsive.Snippets");
+    W(this.g, "Initializing Snippets.");
+    try {
+      this.o = new tj, this.ta = new Yg(new Xg(this.o.Kb, this.o.mb, function (b, c) {
+        return a.Oc(b, c)
+      })), W(this.g, "Finished initializing Snippets.")
+    } catch (b) {
+      V(this.g, "Error initializing Snippets. Uncaught exception.", b), this.h()
+    }
+  };
+  uj.prototype.Oc = function (a, b) {
+    (a = G(this.o.bg, a)) && M.enable(a, "hidden", !b)
+  };
+  uj.prototype.h = function () {
+    this.ta && (this.ta.h(), this.ta = null)
+  };
+  var vj = function (a) {
+    ri.call(this);
+    a = a || new Qg;
+    W(this.sa, "Initializing fancy template.");
+    try {
+      this.kd = new Pg(a.If);
+      this.Kc = new Ug;
+      this.Yd = new sj;
+      this.Ud = new pj;
+      var b = new $g;
+      this.Pc = gh(b);
+      this.Pc.forEach(function (c) {
+        return c.ia()
+      });
+      this.$d = new uj;
+      Vg(this.Kc);
+      W(this.sa, "Finished initializing fancy template.")
+    } catch (c) {
+      V(this.sa, "Error initializing fancy template. Uncaught exception.", c), this.h()
+    }
+  };
+  pa(vj, ri);
+  vj.prototype.h = function () {
+    var a = this;
+    return ri.prototype.h.call(this).then(function () {
+      a.kd && a.kd.h();
+      a.Kc && a.Kc.h();
+      a.Yd && a.Yd.h();
+      a.Ud && a.Ud.h();
+      a.Pc && a.Pc.forEach(function (b) {
+        return b.h()
+      });
+      a.$d && a.$d.h();
+      a.kd = null;
+      a.Kc = null;
+      a.Yd = null;
+      a.Ud = null;
+      a.Pc = null;
+      a.$d = null
+    })
+  };
+  (function (a) {
+    var b = function () {
+      document.body.setAttribute("data-js-state", "loading");
+      a();
+      document.body.setAttribute("data-js-state", "loaded")
+    };
+    "loading" != document.readyState ? b() : O(window, "DOMContentLoaded", b)
+  })(function () {
+    return new vj
+  });
+}).call(this);
