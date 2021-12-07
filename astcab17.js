@@ -11,14 +11,17 @@ function sbrOpen(){
 }
 sbrBtn.addEventListener('click', sbrOpen, false );
 
-if(sbrIsOpn){ 
-var sbrOver = document.querySelector(".bg-overlay"),
-sbrNav = document.querySelector(".touch-icon");
+
 function sbrClose() {
       sbr.classList.remove('sidebar-visible');
       body.classList.remove('sidebar-visible');
       sbr.classList.add('sidebar-invisible');
   }
+if(!sbrIsOpn){ 
+sbrBtn.addEventListener('click', sbrOpen, false );
+} else { 
+var sbrOver = document.querySelector(".bg-overlay"),
+sbrNav = document.querySelector(".touch-icon");
 sbrOver.addEventListener('click', sbrClose, false );
 sbrNav.addEventListener('click', sbrClose, false );
 }
