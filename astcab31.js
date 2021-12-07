@@ -5,10 +5,8 @@ var body = document.body,
 
 // Sidebar Toggle
 function sbrOpen(e){
-    if(sbr.matches('.sidebar-invisible')){
     sbr.classList.replace('sidebar-invisible', 'sidebar-visible');
     body.classList.add('sidebar-visible');
-    }
 }
 sbrBtn.addEventListener('click', sbrOpen, false );
       
