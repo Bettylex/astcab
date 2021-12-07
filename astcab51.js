@@ -12,7 +12,7 @@ function sbrTgl() {
 }
   if (sbrIsOpn) {
   window.addEventListener("click", function(e) {
-        if (e.target.matches('sidebar-visible>.touch-icon') || e.target.matches('sidebar-visible+.bg-overlay')) {
+        if (e.target.matches('.touch-icon') || e.target.matches('.bg-overlay')) {
           sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
           body.classList.remove('sidebar-visible');
         }
