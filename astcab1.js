@@ -14,7 +14,7 @@ sbrBtn.addEventListener('click', sbrOpen, false );
 
 if (sbr.classList.contains('sidebar-visible')) {
 function sbrCls(e) {
-    if (e.target.matches('.bg-overlay') || e.target.matches('.navigation .touch-icon') ) {
+    if (e.target.matches('.bg-overlay') || e.target.matches('.touch-icon') ) {
       sbr.classList.remove('sidebar-visible')
       sbr.classList.add('sidebar-invisible');
       body.classList.toggle('sidebar-invisible');
