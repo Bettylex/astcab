@@ -1,7 +1,7 @@
 var body = document.body,
       sbrBtn = document.querySelector(".hamburger-menu-container"),
       sbr = document.querySelector(".sidebar-container"),
-      sbrOver = document.querySelector(".sidebar-visible~.bg-overlay"),
+      sbrOver = document.querySelector(".sidebar-visible + .bg-overlay"),
       sbrNav = document.querySelector(".sidebar-visible .touch-icon");
 
 // Sidebar Toggle
