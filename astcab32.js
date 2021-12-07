@@ -11,7 +11,7 @@ function sbrOpen(){
 sbrBtn.addEventListener('click', sbrOpen, false );
       
 document.addEventListener('click', function (e) {
-    if(e.target.closest('.sidebar-container').matches('.sidebar-visible')){
+    if(e.target.matches('.touch-icon') || e.target.matches('.bg-overlay') ){
     sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
     body.classList.remove('sidebar-visible');
       }  
