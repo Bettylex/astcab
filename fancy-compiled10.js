@@ -2729,35 +2729,6 @@
         "There was an error initializing the collapsed header. Uncaught exception.", d), this.h()
     }
   };
-  Hf.prototype.qg = function () {
-    var a = this,
-      b = this.Gd;
-    this.Gd = Oc(document).y;
-    b = this.Gd < b;
-    0 > this.uf.getBoundingClientRect().top && b ? this.Xd || (this.Rb && (L in this.A && R(this.A, L), this.Rb = !1), this.Xd = !0, M.add(document.body, "collapsed-header"), M.contains(this.fa, "cloned") || (M.add(this.fa, "cloned"), this.fa.appendChild(this.Sf)), M.add(this.A, "sticky"), M.remove(this.A, "animating"), If(this), setTimeout(function () {
-        M.add(a.A, "animating");
-        Ff(a.A, 0);
-        a.A.style.opacity = "1";
-        je("collapsed-header-show", new Jf("collapsed-header-show"))
-      },
-      0), document.body.appendChild(this.A)) : (this.Xd = !1, M.contains(this.fa, "cloned") && (If(this), L ? O(this.A, L, this.Qe, !1, this) : setTimeout(function () {
-      return a.Qe()
-    }, this.qc.hg), this.Rb = !0))
-  };
-  var If = function (a) {
-    var b = a.A.getBoundingClientRect().height;
-    Ff(a.A, -b);
-    a.A.style.opacity = "0"
-  };
-  Hf.prototype.Qe = function () {
-    this.Rb && (this.A.style.transform = "", this.A.style.opacity = "", L && R(this.A, L), this.Rb = !1, this.fa.parentNode.insertBefore(this.A, this.fa), M.remove(document.body, "collapsed-header"), M.contains(this.fa, "cloned") && (M.remove(this.fa, "cloned"), this.fa.removeChild(this.fa.lastChild)), M.remove(this.A, "sticky"), je("collapsed-header-hide", new Jf("collapsed-header-hide")))
-  };
-  Hf.prototype.isVisible = function () {
-    return M.contains(document.body, "collapsed-header")
-  };
-  Hf.prototype.Ee = function () {
-    return this.isVisible() && this.A.offsetHeight || 0
-  };
   var Gf = function (a) {
       Kf(a, !0);
       O(window, "hashchange", function () {
