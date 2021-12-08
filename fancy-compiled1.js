@@ -2695,16 +2695,25 @@
     Df = Tb(function () {
       return C || yb || z && 0 <= mb(Bf, 10) || x && 0 <= mb(Bf, 10)
     }),
+    Ff = function (a, b) {
+      Cf() && (b = Df() ? "translate3d(0px," + b + "px,0px)" : "translate(0px," + b + "px)", kd(a, Ef(), b))
+    },
     Ef = Tb(function () {
       return x && 9 == Rb ? "-ms-transform" : "transform"
     });
-		
-	
-		
-		
-		
-		
-		
+  var Nf = function (a, b, c) {
+    var d = Sc(document, "div");
+    M.add(d, "dim-overlay");
+    M.add(d, "hidden");
+    c && (d.id = c);
+    a.appendChild(d);
+    var e = new Mf(d);
+    O(d, "click", function (f) {
+      b && b(f);
+      e.Qb()
+    });
+    return e
+  };
   var Qf = function (a, b, c, d, e, f) {
       if (Ab && e) return Of(a);
       if (e && !d) return !1;
@@ -6127,6 +6136,8 @@
       this.Kc = new Ug;
       this.Yd = new sj;
       this.Ud = new pj;
+      var b = new $g;
+      b.ib = ["collapsed-header-show", "collapsed-header-hide"];
       this.Pc = gh(b);
       this.Pc.forEach(function (c) {
         return c.ia()
