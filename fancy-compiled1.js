@@ -1,5 +1,6 @@
 (function () {
   /*
+
    Copyright The Closure Library Authors.
    SPDX-License-Identifier: Apache-2.0
   */
@@ -162,7 +163,8 @@
         })
       }
     }
-   function e(l) {
+
+    function e(l) {
       var m = Object[l];
       m && (Object[l] = function (p) {
         if (p instanceof b) return p;
@@ -428,7 +430,6 @@
         for (var g = 0; !(f = b.next()).done;) e.push(c.call(d, f.value, g++))
       } else
         for (f = b.length, g = 0; g < f; g++) e.push(c.call(d, b[g], g));
-
       return e
     }
   });
@@ -1467,9 +1468,7 @@
     this.top *= b;
     this.height *= b;
     return this
-  }; 
-  
-  
+  };
   var kd = function (a, b, c) {
       if ("string" === typeof b)(b = jd(a, b)) && (a.style[b] = c);
       else
@@ -1679,15 +1678,6 @@
       Gd = !0;
       return b
     };
-    
-    
-    
-    
-    
-    
-    
-    
-    
   var M = {
     hb: !1,
     De: function (a) {
@@ -2699,6 +2689,22 @@
       } else if (xf) return (a = Af(/Android\s+([0-9.]+)/)) ? a : Af(/Version\/([0-9.]+)/);
       return ""
     }();
+  var Cf = Tb(function () {
+      return !x || 0 <= mb(Bf, 9)
+    }),
+    Df = Tb(function () {
+      return C || yb || z && 0 <= mb(Bf, 10) || x && 0 <= mb(Bf, 10)
+    }),
+    Ef = Tb(function () {
+      return x && 9 == Rb ? "-ms-transform" : "transform"
+    });
+		
+	
+		
+		
+		
+		
+		
   var Qf = function (a, b, c, d, e, f) {
       if (Ab && e) return Of(a);
       if (e && !d) return !1;
@@ -3356,7 +3362,6 @@
     $h: "live",
     ji: "multiline",
     ki: "multiselectable",
-
     oi: "orientation",
     pi: "owns",
     ri: "posinset",
@@ -4083,10 +4088,117 @@
     this.sf = "sharing-platform-button";
     this.Pf = !0
   };
-
-  
-  
-  
+  var nh = function (a) {
+    this.g = U("blogger.templates.responsive.Collapsible");
+    this.pa = a;
+    this.ge = this.ce = this.Ob = this.Na = this.C = null
+  };
+  pa(nh, Wg);
+  nh.prototype.ia = function () {
+    W(this.g, "Initializing collapsible.");
+    try {
+      var a = (this.pa || document).getElementsByTagName("DETAILS");
+      if (1 != a.length) return V(this.g, "Collapsible did not contain exactly one details element."), Je();
+      this.C = a[0];
+      var b = (this.C || document).getElementsByTagName("SUMMARY");
+      if (1 != b.length) return V(this.g, "Collapsible did not contain exactly one summary element."), Je();
+      this.Na = b[0];
+      this.Ob = "b-details-" + Aa(this.C);
+      Id() || (this.C.id = this.Ob, xg(this.Na, "button"), X(this.Na, "controls", this.Ob),
+        X(this.C, "expanded", !1), X(this.Na, "expanded", !1), ab(document.querySelectorAll("#" + this.Ob + " > :not(summary)")).forEach(function (c) {
+          return X(c, "hidden", !0)
+        }));
+      this.ce = O(this.Na, "click", this.bd, !1, this)
+    } catch (c) {
+      return V(this.g, "Error initializing collapsible. Uncaught exception.", c), this.h().then(function () {
+        return Ke()
+      })
+    }
+    W(this.g, "Finished initializing collapsible.");
+    return Je()
+  };
+  nh.prototype.bd = function (a) {
+    var b = this;
+    a.preventDefault();
+    var c = H(this.Na, "height");
+    if (this.C.hasAttribute("open")) L ? (R(this.C, L), ud(this.C, H(this.C, "height")), this.C.removeAttribute("open"), setTimeout(function () {
+      ud(b.C, c)
+    }, 0)) : this.C.removeAttribute("open");
+    else if (ud(this.C, "auto"), this.C.setAttribute("open", "open"), L) {
+      var d = H(this.C, "height");
+      ud(this.C, c);
+      setTimeout(function () {
+        ud(b.C, d);
+        b.ge = O(b.C, L, function () {
+          ud(b.C, "auto");
+          R(b.C, L)
+        })
+      }, 0)
+    }
+    Id() || (this.C && Ag(this.C, "expanded"), this.Na && Ag(this.Na,
+      "expanded"), ab(document.querySelectorAll("#" + this.Ob + " > :not(summary)")).forEach(function (e) {
+      return Ag(e, "hidden")
+    }))
+  };
+  nh.prototype.h = function () {
+    this.ce && Q(this.ce);
+    this.ge && Q(this.ge);
+    return Je()
+  };
+  var oh = function (a) {
+    a = document.querySelectorAll(a);
+    for (var b = [], c = 0; a && c < a.length; c++) b.push(new nh(a[c]));
+    return b
+  };
+  var ph = function (a, b, c) {
+    this.g = U("blogger.templates.responsive.Extendable");
+    W(this.g, "Initializing extendable.");
+    try {
+      this.L = a, this.Wc = b, this.Db = c ? c : null, O(b, "click", this.bd, !1, this), c && O(c, "click", this.bd, !1, this)
+    } catch (d) {
+      V(this.g, "Error initializing extendable. Uncaught exception.", d), this.h()
+    }
+    W(this.g, "Finished initializing extendable.")
+  };
+  ph.prototype.bd = function () {
+    var a = this;
+    if (M.contains(this.L, "expanded")) L && (R(this.L, L), ud(this.L, H(this.L, "height")), setTimeout(function () {
+      ud(a.L, 0)
+    }, 0)), M.remove(this.L, "expanded"), M.remove(this.Wc, "hidden"), this.Db && M.add(this.Db, "hidden");
+    else {
+      ud(this.L, "auto");
+      if (L) {
+        var b = H(this.L, "height");
+        ud(this.L, 0);
+        setTimeout(function () {
+          ud(a.L, b);
+          O(a.L, L, function () {
+            ud(a.L, "auto");
+            R(a.L, L)
+          })
+        }, 0)
+      }
+      M.add(this.L, "expanded");
+      M.add(this.Wc, "hidden");
+      this.Db && M.remove(this.Db, "hidden")
+    }
+  };
+  ph.prototype.h = function () {
+    this.Wc && R(this.Wc, "click");
+    this.Db && R(this.Db, "click");
+    this.L && (R(this.L, L), R(this.L, "click"))
+  };
+  var qh = function (a) {
+    a = document.querySelectorAll(".widget." + a);
+    for (var b = [], c = 0; a && c < a.length; c++) {
+      var d = a[c],
+        e = G("show-more", d),
+        f = G("show-less", d);
+      d = G("remaining-items", d);
+      e && d && b.push(new ph(d, e, f))
+    }
+    return b
+  };
   var rh = function () {
     this.g = U("blogger.templates.responsive.Archive");
     this.Ha = this.Z = null;
@@ -4813,22 +4925,6 @@
     }
     a = a || "LATEST";b = "1.2.0";
     return a == b ? 0 : "LATEST" == a || "LATEST" == b ? "LATEST" == a ? 1 : -1 : mb(a, b)
-  };
-  var ti = function (a) {
-    return function () {
-      M.toggle(a, "sidebar-invisible")
-    }
-  };
-
-  function ui(a, b) {
-    var c = function (d) {
-      var e = 0;
-      do e += d.offsetTop; while (d = d.offsetParent);
-      return e
-    };
-    b = c(b);
-    c = c(a);
-    Math.abs(c - b) >= window.innerHeight ? M.remove(a, "invisible") : M.add(a, "invisible")
   };
   var vi = function (a, b, c, d) {
     Od.call(this, d);
@@ -5998,4 +6094,78 @@
       var c = G("sharing-button", a[b]);
       R(c, "click")
     }
+  };
+  var tj = function () {
+    this.Kb = "r-snippet-container";
+    this.mb = "r-snippetized";
+    this.bg = "r-snippet-fade"
+  };
+  var uj = function () {
+    var a = this;
+    this.g = U("blogger.templates.responsive.Snippets");
+    W(this.g, "Initializing Snippets.");
+    try {
+      this.o = new tj, this.ta = new Yg(new Xg(this.o.Kb, this.o.mb, function (b, c) {
+        return a.Oc(b, c)
+      })), W(this.g, "Finished initializing Snippets.")
+    } catch (b) {
+      V(this.g, "Error initializing Snippets. Uncaught exception.", b), this.h()
+    }
+  };
+  uj.prototype.Oc = function (a, b) {
+    (a = G(this.o.bg, a)) && M.enable(a, "hidden", !b)
+  };
+  uj.prototype.h = function () {
+    this.ta && (this.ta.h(), this.ta = null)
+  };
+  var vj = function (a) {
+    ri.call(this);
+    a = a || new Qg;
+    W(this.sa, "Initializing fancy template.");
+    try {
+      this.kd = new Pg(a.If);
+      this.Kc = new Ug;
+      this.Yd = new sj;
+      this.Ud = new pj;
+      this.Pc = gh(b);
+      this.Pc.forEach(function (c) {
+        return c.ia()
+      });
+      this.$d = new uj;
+      Vg(this.Kc);
+      W(this.sa, "Finished initializing fancy template.")
+    } catch (c) {
+      V(this.sa, "Error initializing fancy template. Uncaught exception.", c), this.h()
+    }
+  };
+  pa(vj, ri);
+  vj.prototype.h = function () {
+    var a = this;
+    return ri.prototype.h.call(this).then(function () {
+      a.kd && a.kd.h();
+      a.Kc && a.Kc.h();
+      a.Yd && a.Yd.h();
+      a.Ud && a.Ud.h();
+      a.Pc && a.Pc.forEach(function (b) {
+        return b.h()
+      });
+      a.$d && a.$d.h();
+      a.kd = null;
+      a.Kc = null;
+      a.Yd = null;
+      a.Ud = null;
+      a.Pc = null;
+      a.$d = null
+    })
+  };
+  (function (a) {
+    var b = function () {
+      document.body.setAttribute("data-js-state", "loading");
+      a();
+      document.body.setAttribute("data-js-state", "loaded")
+    };
+    "loading" != document.readyState ? b() : O(window, "DOMContentLoaded", b)
+  })(function () {
+    return new vj
+  });
 }).call(this);
