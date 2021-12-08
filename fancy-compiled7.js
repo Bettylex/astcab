@@ -2701,7 +2701,47 @@
     Ef = Tb(function () {
       return x && 9 == Rb ? "-ms-transform" : "transform"
     });
- 
+  var Hf = function (a) {
+    this.g = U("blogger.templates.responsive.CollapsedHeader");
+    W(this.g, "Initializing collapsed header.");
+    try {
+      if (this.qc = a || new Ga, this.dc = null, this.A = document.querySelector(".centered-top-container"))
+        if (this.fa = document.querySelector(".centered-top-placeholder"))
+          if (this.uf = document.querySelector(this.qc.Tg)) {
+            var b = this.A.querySelector(".centered-top");
+            if (b) {
+              this.Sf = b.cloneNode(!0);
+              this.Xd = this.Rb = !1;
+              this.Gd = Oc(document).y;
+              var c = Ub(this.qg, this.qc.Eg, this);
+              this.dc = c;
+              c();
+              O(this.qc.Pg,
+                "scroll", this.dc);
+              Gf(this);
+              W(this.g, "Finished initializing collapsed header.")
+            } else V(this.g, "There was an error initializing the collapsed header. centered-top not found.")
+          } else V(this.g, "There was an error initializing the collapsed header. centered-bottom not found.");
+      else V(this.g, "There was an error initializing the collapsed header. centered-top-placeholder not found.");
+      else V(this.g, "There was an error initializing the collapsed header. centered-top-container not found.")
+    } catch (d) {
+      V(this.g,
+        "There was an error initializing the collapsed header. Uncaught exception.", d), this.h()
+    }
+  };
+  var Nf = function (a, b, c) {
+    var d = Sc(document, "div");
+    M.add(d, "dim-overlay");
+    M.add(d, "hidden");
+    c && (d.id = c);
+    a.appendChild(d);
+    var e = new Mf(d);
+    O(d, "click", function (f) {
+      b && b(f);
+      e.Qb()
+    });
+    return e
+  };
   var Qf = function (a, b, c, d, e, f) {
       if (Ab && e) return Of(a);
       if (e && !d) return !1;
