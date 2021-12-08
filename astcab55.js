@@ -16,7 +16,7 @@ function sbrCls() {
     sbr.classList.replace('sidebar-visible', 'sidebar-invisible');
     body.classList.remove('sidebar-visible');
 }
-function DOMContentLoaded() {
+window.onload = function() {
   var sbrNav = document.querySelector(".sidebar-back"),
   sbrOver = document.querySelector(".bg-overlay");
   sbrNav.addEventListener('click', sbrCls, false);
