@@ -5011,11 +5011,6 @@
     a = a || "LATEST";b = "1.2.0";
     return a == b ? 0 : "LATEST" == a || "LATEST" == b ? "LATEST" == a ? 1 : -1 : mb(a, b)
   };
-  var ti = function (a) {
-    return function () {
-      M.toggle(a, "sidebar-invisible")
-    }
-  };
 
   function ui(a, b) {
     var c = function (d) {
@@ -6195,32 +6190,6 @@
       var c = G("sharing-button", a[b]);
       R(c, "click")
     }
-  };
-  var sj = function () {
-    var a = this;
-    this.g = U("blogger.templates.responsive.SidebarToggle");
-    W(this.g, "Initializing SidebarToggle.");
-    try {
-      var b = document.querySelector(".sidebar-container");
-      if (b) {
-        this.Zd = b;
-        var c = this.Zd.parentElement;
-        this.s = c && Nf(c, function () {
-          return a.fe()
-        });
-        (this.Xc = document.querySelector(".sidebar-back")) && O(this.Xc, "click", this.fe, !1, this);
-        (this.Ac = document.querySelector(".centered-top-container .hamburger-menu")) && O(this.Ac, "click", this.fe, !1, this);
-        W(this.g, "Finished initializing sidebar toggle.")
-      } else V(this.g,
-        "There was an error initializing the sidebar toggle section. sidebar not found.")
-    } catch (d) {
-      V(this.g, "Error initializing sidebar toggle. Uncaught exception.", d), this.h()
-    }
-  };
-  sj.prototype.h = function () {
-    this.Ac && R(this.Ac, "click");
-    this.Xc && R(this.Xc, "click");
-    this.s && (this.s.aa(), this.s = null)
   };
   var tj = function () {
     this.Kb = "r-snippet-container";
