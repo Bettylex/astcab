@@ -6217,10 +6217,6 @@
       V(this.g, "Error initializing sidebar toggle. Uncaught exception.", d), this.h()
     }
   };
-  sj.prototype.fe = function () {
-    ti(this.Zd)();
-    M.contains(this.Zd, "sidebar-invisible") ? (this.s && this.s.Qb(), M.remove(document.body, "sidebar-visible")) : (this.s && this.s.show(), M.add(document.body, "sidebar-visible"))
-  };
   sj.prototype.h = function () {
     this.Ac && R(this.Ac, "click");
     this.Xc && R(this.Xc, "click");
